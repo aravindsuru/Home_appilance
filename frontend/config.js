@@ -18,7 +18,7 @@ const CONFIG = {
   // ── Company Details ───────────────────────────────────────
   companyName: 'GK Services',
   tagline: 'Fast. Reliable. Affordable.',
-  phoneNumber: '+91 9346598080',        // Displayed on website
+  phoneNumber: '+91 7396917646',        // Displayed on website
   whatsappNumber: '9346598080',           // Digits only for wa.me links
   phoneNumberRaw: '9346598080',           // For tel: links
 
