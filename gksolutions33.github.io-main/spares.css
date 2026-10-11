@@ -1,0 +1,303 @@
+/* ============================================================
+   SPARES & ACCESSORIES PAGE — GK Services
+   Modern Light Theme Edition
+   ============================================================ */
+
+/* ─── Hero ────────────────────────────────────────────────── */
+.spares-hero {
+  position: relative;
+  padding: 7rem 0 3.5rem;
+  text-align: center;
+  overflow: hidden;
+  background: linear-gradient(180deg, #f0f7ff 0%, #ffffff 100%);
+}
+
+.spares-hero-container {
+  position: relative;
+  z-index: 2;
+}
+
+.spares-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1.2rem;
+  background: rgba(14, 165, 233, 0.08);
+  border: 1px solid rgba(14, 165, 233, 0.25);
+  border-radius: var(--r-full);
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #0284c7;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 2px 8px rgba(14, 165, 233, 0.1);
+}
+
+.spares-hero h1 {
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  font-weight: 800;
+  line-height: 1.15;
+  margin-bottom: 1rem;
+  color: #0f172a;
+}
+
+.spares-hero-sub {
+  max-width: 640px;
+  margin: 0 auto 1.5rem;
+  font-size: 1.05rem;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.spares-hero-trust {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #334155;
+}
+
+.spares-hero-trust .dot-sep {
+  color: #94a3b8;
+}
+
+/* ─── Filter Tabs ────────────────────────────────────────── */
+.spares-filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 2.5rem;
+}
+
+.filter-tab {
+  padding: 0.65rem 1.4rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  font-family: var(--font-heading);
+  color: #475569;
+  background: #ffffff;
+  border: 1px solid #cbd5e1;
+  border-radius: var(--r-full);
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 2px 4px rgba(15, 23, 42, 0.03);
+}
+
+.filter-tab:hover {
+  color: #0284c7;
+  border-color: #0284c7;
+  background: #f0f9ff;
+}
+
+.filter-tab.active {
+  color: #0284c7;
+  background: #e0f2fe;
+  border-color: #0284c7;
+  box-shadow: 0 2px 10px rgba(14, 165, 233, 0.15);
+  font-weight: 700;
+}
+
+/* ─── Spares Grid ────────────────────────────────────────── */
+.spares-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+@media (max-width: 400px) {
+  .spares-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ─── Spare Card ─────────────────────────────────────────── */
+.spare-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: var(--r-xl);
+  overflow: hidden;
+  transition: var(--transition);
+  animation: fadeSlideUp 0.5s ease both;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+}
+
+.spare-card:hover {
+  border-color: rgba(14, 165, 233, 0.45);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(14, 165, 233, 0.12);
+}
+
+.spare-card-glow {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #0284c7, transparent);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.spare-card:hover .spare-card-glow {
+  opacity: 1;
+}
+
+.spare-icon-area {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 1.5rem 0.5rem;
+}
+
+.spare-emoji {
+  font-size: 2.8rem;
+  filter: drop-shadow(0 4px 12px rgba(14, 165, 233, 0.2));
+}
+
+.spare-info {
+  flex: 1;
+  padding: 0.5rem 1.5rem 1rem;
+}
+
+.spare-cat-tag {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #0284c7;
+  background: rgba(14, 165, 233, 0.08);
+  border: 1px solid rgba(14, 165, 233, 0.25);
+  padding: 0.2rem 0.7rem;
+  border-radius: var(--r-full);
+  margin-bottom: 0.6rem;
+}
+
+.spare-cat-tag.fridge-tag {
+  color: #0891b2;
+  background: rgba(8, 145, 178, 0.08);
+  border-color: rgba(8, 145, 178, 0.25);
+}
+
+.spare-cat-tag.accessory-tag {
+  color: #b45309;
+  background: rgba(245, 158, 11, 0.08);
+  border-color: rgba(245, 158, 11, 0.25);
+}
+
+.spare-info h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+  color: #0f172a;
+}
+
+.spare-info p {
+  font-size: 0.88rem;
+  color: #64748b;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+}
+
+.spare-meta {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.6rem 1rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.spare-warranty {
+  color: #475569;
+}
+
+.spare-stock {
+  font-weight: 700;
+}
+
+.spare-stock.in-stock {
+  color: #16a34a;
+}
+
+.spare-stock.out-of-stock {
+  color: #dc2626;
+}
+
+/* ─── Order Button ───────────────────────────────────────── */
+.spare-order-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.4rem;
+  padding: 0.85rem 1.5rem;
+  margin: 0 1rem 1rem;
+  font-size: 0.9rem;
+  font-weight: 700;
+  font-family: var(--font-heading);
+  color: #ffffff;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  border-radius: var(--r);
+  text-decoration: none;
+  transition: var(--transition);
+  box-shadow: 0 4px 15px rgba(37, 211, 102, 0.25);
+}
+
+.spare-order-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(37, 211, 102, 0.4);
+}
+
+/* ─── CTA Card ───────────────────────────────────────────── */
+.spares-cta-card {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: linear-gradient(145deg, #ffffff 0%, #f0f9ff 100%);
+  border: 1.5px solid rgba(14, 165, 233, 0.25);
+  border-radius: var(--r-2xl);
+  margin-bottom: 2rem;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05);
+}
+
+.spares-cta-icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.spares-cta-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.6rem;
+  color: #0f172a;
+}
+
+.spares-cta-card p {
+  max-width: 480px;
+  margin: 0 auto 1.5rem;
+  color: #475569;
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.spares-cta-card .btn {
+  display: inline-flex;
+}
+
+/* ─── Animations ─────────────────────────────────────────── */
+@keyframes fadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

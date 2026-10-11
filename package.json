@@ -1,0 +1,20 @@
+{
+  "name": "gk-services-3tier-app",
+  "version": "1.0.0",
+  "description": "3-Tier architecture separation: Frontend, Backend API, and Database Layer for GK Services Appliance Repairs",
+  "type": "module",
+  "scripts": {
+    "start": "node start.js",
+    "backend": "node backend/src/server.js",
+    "frontend": "node frontend/serve.js"
+  },
+  "keywords": [
+    "appliance-repair",
+    "fullstack",
+    "3-tier",
+    "express",
+    "supabase"
+  ],
+  "author": "GK Services",
+  "license": "ISC"
+}
