@@ -5,7 +5,7 @@ dotenv.config();
 const JWT_SECRET = process.env.JWT_SECRET || 'gk_services_default_secret_key_change_me';
 
 /**
- * Middleware to verify that the request contains a valid admin JWT
+ * Middleware to only verify that the request contains a valid admin JWT
  */
 export function requireAdminAuth(req, res, next) {
   const authHeader = req.headers.authorization;
