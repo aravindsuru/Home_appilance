@@ -76,10 +76,10 @@ Run either of the following:
 
 ### 2. Access the Application
 
-- **Customer Website**: [http://localhost:8080/](http://localhost:8080/)
-- **Admin Dashboard**: [http://localhost:8080/admin.html](http://localhost:8080/admin.html)
-- **Spare Parts Catalog**: [http://localhost:8080/spares.html](http://localhost:8080/spares.html)
-- **Backend API**: [http://localhost:5000/api/health](http://localhost:5000/api/health)
+  - **Customer Website**: [https://home-appilance.onrender.com]
+- **Admin Dashboard**: [https://home-appilance.onrender.com](http://localhost:8080/admin.html)
+- **Spare Parts Catalog**: [https://home-appilance.onrender.com](http://localhost:8080/spares.html)
+- **Backend API**: [https://home-appilance.onrender.com](http://localhost:5000/api/health)
 
 ---
 
