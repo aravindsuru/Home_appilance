@@ -4,9 +4,8 @@
   "description": "3-Tier architecture separation: Frontend, Backend API, and Database Layer for GK Services Appliance Repairs",
   "type": "module",
   "scripts": {
-    "start": "node start.js",
-    "backend": "node backend/src/server.js",
-    "frontend": "node frontend/serve.js"
+    "start": "node backend/src/server.js",
+    "backend": "node backend/src/server.js"
   },
   "keywords": [
     "appliance-repair",

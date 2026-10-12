@@ -22,7 +22,6 @@ gksolutions33/
 │   ├── config.js               # Clean public UI configs (NO secrets or passwords)
 │   ├── style.css & spares.css  # UI stylesheets
 │   ├── images/                 # Branding and imagery
-│   ├── serve.js                # Zero-dependency local web server (Port 8080)
 │   └── README.md
 │
 ├── ⚙️ backend/                 # Application Layer (Node.js & Express API)
@@ -44,8 +43,6 @@ gksolutions33/
 │   ├── seed.sql                # Realistic sample test records
 │   └── README.md               # Database setup guide & data dictionary
 │
-├── start.bat                   # 1-Click launcher for Windows
-├── start.js                    # Concurrent process orchestrator
 ├── package.json                # Project root runner
 └── README.md                   # System documentation
 ```
@@ -63,23 +60,28 @@ gksolutions33/
 
 ## ⚡ Quick Start
 
-### 1. Start Both Frontend and Backend
+### Deploy the website to Render
 
-Run either of the following:
+Configure the Render web service to use the repository root, with this build command:
 
-- **Option A (Terminal)**:
-  ```bash
-  node start.js
-  ```
-- **Option B (Windows 1-Click)**:
-  Double-click `start.bat`.
+```text
+npm install --prefix backend
+```
 
-### 2. Access the Application
+Set the start command to:
 
-  - **Customer Website**: [https://home-appilance.onrender.com]
-- **Admin Dashboard**: [https://home-appilance.onrender.com](http://localhost:8080/admin.html)
-- **Spare Parts Catalog**: [https://home-appilance.onrender.com](http://localhost:8080/spares.html)
-- **Backend API**: [https://home-appilance.onrender.com](http://localhost:5000/api/health)
+```text
+npm start
+```
+
+Add `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, `ADMIN_PASSWORD`, and `JWT_SECRET` as private Render environment variables. Push these project changes to the branch connected to Render and wait for its deployment to finish.
+
+The deployed site and API will then be available at:
+
+- **Customer Website**: [https://home-appilance.onrender.com](https://home-appilance.onrender.com)
+- **Admin Dashboard**: [https://home-appilance.onrender.com/admin.html](https://home-appilance.onrender.com/admin.html)
+- **Spare Parts Catalog**: [https://home-appilance.onrender.com/spares.html](https://home-appilance.onrender.com/spares.html)
+- **Backend API health check**: [https://home-appilance.onrender.com/api/health](https://home-appilance.onrender.com/api/health)
 
 ---
 

@@ -9,11 +9,8 @@
 const CONFIG = {
 
   // ── Backend API ───────────────────────────────────────────
-  // Base URL of the Node.js Express backend service.
-  // Change this if deploying the backend to a remote server (e.g. Render, Railway, AWS).
-  apiBaseUrl: window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1'
-    ? 'http://localhost:5000/api'
-    : '/api',
+  // Hosted API used by the frontend.
+  apiBaseUrl: 'https://home-appilance.onrender.com',
 
   // ── Company Details ───────────────────────────────────────
   companyName: 'GK Services',

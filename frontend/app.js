@@ -424,9 +424,9 @@ async function submitForm() {
 async function insertRequest(data) {
   const apiBase = (typeof CONFIG !== 'undefined' && CONFIG.apiBaseUrl)
     ? CONFIG.apiBaseUrl
-    : 'http://localhost:5000/api';
+    : 'https://home-appilance.onrender.com';
 
-  const res = await fetch(`${apiBase}/requests`, {
+  const res = await fetch(`${apiBase}/api/requests`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -560,4 +560,3 @@ function fallbackCopy(url) {
     showToast('Share URL: ' + url, 'info');
   }
 }
-

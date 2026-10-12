@@ -67,9 +67,9 @@ async function doLogin() {
   try {
     const apiBase = (typeof CONFIG !== 'undefined' && CONFIG.apiBaseUrl)
       ? CONFIG.apiBaseUrl
-      : 'http://localhost:5000/api';
+      : 'https://home-appilance.onrender.com';
 
-    const res = await fetch(`${apiBase}/admin/login`, {
+    const res = await fetch(`${apiBase}/api/admin/login`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ password: pw }),
@@ -129,9 +129,9 @@ async function loadRequests() {
 async function fetchAllRequests() {
   const apiBase = (typeof CONFIG !== 'undefined' && CONFIG.apiBaseUrl)
     ? CONFIG.apiBaseUrl
-    : 'http://localhost:5000/api';
+    : 'https://home-appilance.onrender.com';
 
-  const res = await fetch(`${apiBase}/admin/requests?limit=1000`, {
+  const res = await fetch(`${apiBase}/api/admin/requests?limit=1000`, {
     headers: getAuthHeaders(),
   });
 
@@ -489,9 +489,9 @@ async function doDelete(id) {
 async function patchRequest(id, updates) {
   const apiBase = (typeof CONFIG !== 'undefined' && CONFIG.apiBaseUrl)
     ? CONFIG.apiBaseUrl
-    : 'http://localhost:5000/api';
+    : 'https://home-appilance.onrender.com';
 
-  const res = await fetch(`${apiBase}/admin/requests/${id}`, {
+  const res = await fetch(`${apiBase}/api/admin/requests/${id}`, {
     method: 'PATCH',
     headers: getAuthHeaders(),
     body: JSON.stringify(updates),
@@ -509,9 +509,9 @@ async function patchRequest(id, updates) {
 async function deleteRequest(id) {
   const apiBase = (typeof CONFIG !== 'undefined' && CONFIG.apiBaseUrl)
     ? CONFIG.apiBaseUrl
-    : 'http://localhost:5000/api';
+    : 'https://home-appilance.onrender.com';
 
-  const res = await fetch(`${apiBase}/admin/requests/${id}`, {
+  const res = await fetch(`${apiBase}/api/admin/requests/${id}`, {
     method: 'DELETE',
     headers: getAuthHeaders(),
   });
